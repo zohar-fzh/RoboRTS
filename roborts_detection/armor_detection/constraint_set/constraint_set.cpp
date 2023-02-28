@@ -132,7 +132,7 @@ ErrorInfo ConstraintSet::DetectArmor(bool &detected, cv::Point3f &target_3d) {
 
   auto detection_begin = std::chrono::high_resolution_clock::now();
 
-    cv::cvtColor(src_img_, gray_img_, CV_BGR2GRAY);
+    cv::cvtColor(src_img_, gray_img_, cv::COLOR_BGR2GRAY);
     if (enable_debug_) {
       show_lights_before_filter_ = src_img_.clone();
       show_lights_after_filter_ = src_img_.clone();
